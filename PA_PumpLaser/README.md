@@ -15,4 +15,4 @@ This section guides the user to save the matlab variables required by the Veraso
 ```
 * Acquire the required PA data by pressing "Save Burst". "Next Bust" can be used to save a new set of bursts. 
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/VinVincely/BFIL_Verasonics_fns/blob/main/PA_PumpLaser/images/VSX_GUI.png)
