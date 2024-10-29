@@ -4,7 +4,7 @@ This folder houses all the functions need to perform photoacoustic imaging using
 ## Setup and Imaging
 This section guides the user to save the matlab variables required by the Verasonics software to perform PAI. The SetUp
 
-'''
+```
 Inlcude code here! 
-'''
+```
  
