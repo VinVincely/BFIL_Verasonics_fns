@@ -14,3 +14,5 @@ This section guides the user to save the matlab variables required by the Veraso
 >>> Name of .mat file to process: L7-4PA_PumpLaser.mat
 ```
 * Acquire the required PA data by pressing "Save Burst". "Next Bust" can be used to save a new set of bursts. 
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
