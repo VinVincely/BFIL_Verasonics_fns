@@ -39,4 +39,11 @@ Here, "PA_data" & "Bmode_data" are cells that contain the acquired I/Q data of t
 ```
 >>> PA_data = get_nAcq_VSX_Bursts(PA_data, [1 5 9 13 17]);   
 ```
-Here, specific frames numbered - 1, 5, 9, 13 & 17 are retrieved for each burst. 
+Here, specific frames numbered - 1, 5, 9, 13 & 17 are retrieved for each burst and saved to the "PA_data" cell. 
+
+* To visualize the data, the user can use the function "visualize_VSX_sPAI_data". The function can be used to visualize multiple bursts simultaneously. NOTE: Each bust must only contain one frame for code to function.  
+```
+visualize_VSX_sPAI_data(PA_data, Bmode_data, meanFlnc, lambdas, [1 14]); 
+```
+The above function will plot the 1st and 14th burst (as seen below). 
+![An image of the data acquisition folder](https://github.com/VinVincely/BFIL_Verasonics_fns/blob/main/PA_PumpLaser/images/visualizePA.png)
