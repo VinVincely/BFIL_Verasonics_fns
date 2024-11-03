@@ -1,8 +1,10 @@
 # Photoacoustic imaging with Pump Laser
-This folder houses all the functions needed to perform photoacoustic imaging using a pump laser and perform a streamlined analysis approach. This guide offers step-by-step instructions that a new Verasonics user can follow to perform PAI using a pump laser. The guide assumes the user has a lisenced version of verasonics installed and activated (if not, please follow the Verasonics Tutorial/Manuals to do so). The guide also assumes that the trigger connections between the Vantage and the pump laser is performed properly.    
+This folder houses all the functions needed to perform photoacoustic imaging using a pulsed laser diode array triggered by a laser driver. 
 
 ## Setup and Imaging
-This section guides the user to save the matlab variables required by the Verasonics software to perform PAI. The setup file is written for the L7-4 linear array transducer, which the user must change if a different transducer must be used. The user can then follow the steps below to perform PAI, 
+This section guides the user to save the matlab variables required by the Verasonics software using the associated acquisiton scripts. The acquisition script is set up to perform high frame rate imaging (up to ~5000 Hz) where real time image visualization looks terribly "jerky". To reconstruct all data, the associated "RECON" script must be utilized. The setup files are written for the L7-4 linear array transducer, which the user must change if a different transducer must be used. The user can then follow the steps below to perform PAI, 
+
+***** NOTE: UNDER CONSTRUCTION! *****
 
 * Run "SetUpL7_4PA_Delay_BModeToggle.m" to save .mat file for VSX processing. A .mat file named "L7-4PA_PumpLaser.mat" will be saved under the VSX folder's MatFiles directory. 
 ```
