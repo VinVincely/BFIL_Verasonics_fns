@@ -1,5 +1,5 @@
 # Photoacoustic imaging with Pump Laser
-This folder houses all the functions need to perform photoacoustic imaging using a pump laser and perform a streamlined analysis approach. This guide offers step-by-step instructions that a new Verasonics user can follow to perform PAI using a pump laser. The guide assumes the user has a lisenced version of verasonics installed and activated (if not, please follow the Verasonics Tutorial/Manuals to do so). The guide also assumes that the trigger connections between the Vantage and the pump laser is performed properly.    
+This folder houses all the functions needed to perform photoacoustic imaging using a pump laser and perform a streamlined analysis approach. This guide offers step-by-step instructions that a new Verasonics user can follow to perform PAI using a pump laser. The guide assumes the user has a lisenced version of verasonics installed and activated (if not, please follow the Verasonics Tutorial/Manuals to do so). The guide also assumes that the trigger connections between the Vantage and the pump laser is performed properly.    
 
 ## Setup and Imaging
 This section guides the user to save the matlab variables required by the Verasonics software to perform PAI. The setup file is written for the L7-4 linear array transducer, which the user must change if a different transducer must be used. The section assumes that all the files in this repository are saved to the user's local system and added to current MATLAB path. The user can then follow the steps below to perform PAI, 
@@ -20,3 +20,23 @@ This section guides the user to save the matlab variables required by the Veraso
 
 * Once all the required bursts are collected, close the VSX Control GUI to stop the Vantage acquisition and return control to Matlab. 
 ![An image of the data acquisition folder](https://github.com/VinVincely/BFIL_Verasonics_fns/blob/main/PA_PumpLaser/images/burst_fldr.jpg)
+
+## Loading and Visualization of acquired data
+This section guides the user to load the acquired data and saving them to easily accessible variables. The loaded data can then be easily visualized using the Visualization functions in this repository. 
+
+* Load acquired verasonics data using "load_Verasonics_Bursts". NOTE: The present working directory must contain all the acquired bursts.
+```
+>>> [PA_data, Bmode_data, burst_info] = load_Verasonics_Bursts('.');
+```
+Here, "PA_data" & "Bmode_data" are cells that contain the acquired I/Q data of the photoacoustic and ultrasound B-mode images (Size of cell will be equal to number of bursts). "burst_info" stores all the information cataloged in the "info.txt" files within each burst folder. 
+
+* To convert the I/Q data to image files, the function "get_image_from_VSX_data" can be used as follows, 
+```
+>>> PA_data = get_image_from_VSX_data(PA_data, 1);
+```
+
+* If the user needs to retrieve specific frames from the entire PA/US acquisition ensemble, the function "get_nAcq_VSX_Bursts" as follows, 
+```
+>>> PA_data = get_nAcq_VSX_Bursts(PA_data, [1 5 9 13 17]);   
+```
+Here, specific frames numbered - 1, 5, 9, 13 & 17 are retrieved for each burst. 
