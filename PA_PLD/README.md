@@ -1,4 +1,4 @@
-# Photoacoustic imaging with Pump Laser
+# Photoacoustic imaging with PLD array
 This folder houses all the functions needed to perform photoacoustic imaging using a pulsed laser diode array triggered by a laser driver. 
 
 ## Setup and Imaging
